@@ -1,0 +1,15 @@
+table_name: economics
+description:
+
+columns:
+  - name: date
+    type: date
+    description:
+  
+  - name: inflation_rate
+    type: float
+    description:
+  
+  - name: gdp_growth
+    type: float
+    description:

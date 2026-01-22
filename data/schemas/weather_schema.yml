@@ -1,6 +1,7 @@
 table_name: weather
 description: 
 
+columns:
   - name: date
     type: date
     description:
