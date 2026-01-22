@@ -1,0 +1,23 @@
+table_name: sales
+description: Historical retail sales transactions extracted from a transactional system
+
+columns:
+  - name: date
+    type: date
+    description: Date of the sales transactions
+
+  - name: store_id
+    type: integer
+    description: Unique identifier of the store
+
+  - name: product_id
+    type: integer
+    description: Unique identifier of the product_id
+
+  - name: sales_qty
+    type: integer
+    description: Number of units sold
+  
+  - name: revenue
+    type: float
+    description: Total revenue for the transaction
