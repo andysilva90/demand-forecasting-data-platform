@@ -16,4 +16,4 @@ columns:
 
   - name: windspeed
     type: float
-    description: Daily winspeed
+    description: Daily windspeed
