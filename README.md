@@ -41,25 +41,25 @@ This project uses a combination of historical internal data and external public 
 
 4.1 Historical Sales Data (Internal Source)
 
-> Source: Kaggle retail sales dataset
-> Description: Represents a historical extract from a transactional sales system
-> Usage: One-time historical backfill
-> Provides sufficient history for trend analysis and ML training
+* Source: Kaggle retail sales dataset
+* Description: Represents a historical extract from a transactional sales system
+* Usage: One-time historical backfill
+* Provides sufficient history for trend analysis and ML training
 
 In a real-world scenario, this dataset represents an initial data migration from an OLTP system.
 
 4.2 Weather Data (External API)
 
-> Source: Open-Meteo API
-> Type: Public, no authentication required
-> Data: Daily temperature, Precipitation, Wind speed
-> Usage: Continuous ingestion, Demand signal enrichment
+* Source: Open-Meteo API
+* Type: Public, no authentication required
+* Data: Daily temperature, Precipitation, Wind speed
+* Usage: Continuous ingestion, Demand signal enrichment
 
 4.3 Economic Indicators (External API)
 
-> Source: World Bank API
-> Indicators: Inflation rate, GDP growth
-> Usage: Monthly/quarterly enrichment, Long-term demand trend context
+* Source: World Bank API
+* Indicators: Inflation rate, GDP growth
+* Usage: Monthly/quarterly enrichment, Long-term demand trend context
 
 5. Solution Architecture
 
@@ -67,32 +67,32 @@ The platform follows a cloud-based, layered data architecture deployed on AWS.
 
 High-level components:
 
-> Python-based ingestion scripts
-> Amazon S3 as a data lake
-> Layered data modeling (Bronze / Silver / Gold)
-> dbt for transformations and data quality tests
-> Orchestration for automation
-> Machine learning pipeline consuming curated data
+* Python-based ingestion scripts
+* Amazon S3 as a data lake
+* Layered data modeling (Bronze / Silver / Gold)
+* dbt for transformations and data quality tests
+* Orchestration for automation
+* Machine learning pipeline consuming curated data
 
 An architecture diagram is provided in the docs/architecture/ folder.
 
 6. Data Pipeline Flow
 
-> Extract data from source systems and APIs
-> Load raw data into Amazon S3 (Bronze layer)
-> Clean and standardize data (Silver layer)
-> Create analytics- and ML-ready datasets (Gold layer)
-> Generate feature tables for forecasting models
-> Train and evaluate ML models
-> Store predictions for downstream consumption
+* Extract data from source systems and APIs
+* Load raw data into Amazon S3 (Bronze layer)
+* Clean and standardize data (Silver layer)
+* Create analytics- and ML-ready datasets (Gold layer)
+* Generate feature tables for forecasting models
+* Train and evaluate ML models
+* Store predictions for downstream consumption
 
 7. Data Modeling Approach
 
 The data platform follows a layered modeling strategy:
 
-> Bronze: Raw, immutable data as received from sources
-> Silver: Cleaned and standardized datasets
-> Gold: Business-aligned, feature-rich tables optimized for analytics and ML
+* Bronze: Raw, immutable data as received from sources
+* Silver: Cleaned and standardized datasets
+* Gold: Business-aligned, feature-rich tables optimized for analytics and ML
 
 This approach ensures traceability, auditability, and scalability.
 
@@ -102,10 +102,10 @@ The curated Gold-layer datasets are used to train a demand forecasting model tha
 
 Key aspects:
 
-> Time-series feature engineering
-> Lagged variables and rolling averages
-> External signal enrichment
-> Model evaluation using standard regression metrics
+* Time-series feature engineering
+* Lagged variables and rolling averages
+* External signal enrichment
+* Model evaluation using standard regression metrics
 
 The ML pipeline is intentionally decoupled from ingestion and transformation logic.
 
@@ -113,26 +113,26 @@ The ML pipeline is intentionally decoupled from ingestion and transformation log
 
 Data quality checks are applied during transformation, including:
 
-> Null value checks
-> Schema validation
-> Freshness checks
-> Volume anomaly detection
+* Null value checks
+* Schema validation
+* Freshness checks
+* Volume anomaly detection
 
 Key assumptions:
 
-> Historical sales data is complete but static
-> External API data is assumed to be authoritative
-> Forecasts are intended for planning purposes, not real-time decisioning
+* Historical sales data is complete but static
+* External API data is assumed to be authoritative
+* Forecasts are intended for planning purposes, not real-time decisioning
 
 10. Tech Stack
 
-> Cloud: AWS (S3)
-> Programming Language: Python
-> Data Transformation: dbt Core
-> Orchestration: Airflow / Prefect
-> Data Storage: Parquet on S3
-> Machine Learning: scikit-learn / XGBoost
-> Version Control: Git & GitHub
+* Cloud: AWS (S3)
+* Programming Language: Python
+* Data Transformation: dbt Core
+* Orchestration: Airflow / Prefect
+* Data Storage: Parquet on S3
+* Machine Learning: scikit-learn / XGBoost
+* Version Control: Git & GitHub
 
 11. How to Run the Project
 
@@ -142,8 +142,8 @@ Key assumptions:
 
 Potential enhancements include:
 
-> Streaming ingestion for near-real-time data
-> Feature store integration
-> Model versioning and monitoring
-> Cost optimization strategies
-> CI/CD for data pipelines
+* Streaming ingestion for near-real-time data
+* Feature store integration
+* Model versioning and monitoring
+* Cost optimization strategies
+* CI/CD for data pipelines
