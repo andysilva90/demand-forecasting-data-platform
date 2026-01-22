@@ -1,0 +1,18 @@
+table_name: weather
+description: 
+
+  - name: date
+    type: date
+    description:
+
+  - name: avg_temp
+    type: float
+    description:
+
+  - name: precipitation
+    type: float
+    description:
+
+  - name: windspeed
+    type: float
+    description: 
