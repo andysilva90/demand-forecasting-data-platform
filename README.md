@@ -10,9 +10,9 @@ The primary goal of this project is to showcase production-style data engineerin
 Retail and supply chain teams need accurate demand forecasts to make informed inventory and replenishment decisions.
 However, demand is influenced not only by historical sales patterns, but also by external factors such as:
 
-> Weather conditions
-> Economic trends
-> Seasonality and calendar effects
+* Weather conditions
+* Economic trends
+* Seasonality and calendar effects
 
 Without a reliable data platform that combines these signals, forecasting models tend to be inaccurate or difficult to maintain.
 
