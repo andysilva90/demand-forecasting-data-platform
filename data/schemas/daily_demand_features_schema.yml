@@ -1,0 +1,50 @@
+table_name: daily_demand_features
+description: >
+  Gold-layer feature table containing daily sales demand enriched with weather, economic indicators, and engineered time-series features.
+
+grain: One row per product, per store, per day
+
+columns:
+  - name: date
+    type: date
+    description: Business date of the observation
+
+  - name: store_id
+    type: integer
+    description: Store identifier
+
+  - name: product_id
+    type: integer
+    description: Product identifier
+
+  - name: sales_qty
+    type: integer
+    description: Actual units sold (target variable)
+
+  - name: avg_temp
+    type: float
+    description: Average daily temperature
+
+  - name: total_precip
+    type: float
+    description: Total daily precipitation
+
+  - name: inflation_rate
+    type: float
+    description: Inflation rate applicable to the period
+
+  - name: sales_7d_avg
+    type: float
+    description: Rolling 7-day average of sales
+  
+  - name: sales_lag_1
+    type: integer
+    description: Sales quantity from the previous date
+
+  - name: day_of_week
+    type: integer
+    description: Day of week (0=Monday)
+
+  - name: is_weekend
+    type: boolean
+    description: Indicates if the date is a weekend
