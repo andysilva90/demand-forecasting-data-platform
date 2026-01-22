@@ -4,16 +4,16 @@ description:
 columns:
   - name: date
     type: date
-    description:
+    description: Date of the observation
 
   - name: avg_temp
     type: float
-    description:
+    description: Average daily temperature
 
   - name: precipitation
     type: float
-    description:
+    description: Total daily precipitation
 
   - name: windspeed
     type: float
-    description: 
+    description: Average daily winspeed
