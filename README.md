@@ -2,11 +2,14 @@ Project Title:
 Demand Forecasting Data Platform Using External Signals (AWS)
 
 1. Project Overview:
+
 This project demonstrates an end-to-end data engineering pipeline designed to support a machine learning demand forecasting use case.
 The platform ingests historical sales data and enriches it with external signals such as weather conditions and macro-economic indicators. The processed data is transformed into analytics- and ML-ready datasets and stored in the cloud, where it can be consumed by downstream machine learning models.
+
 The primary goal of this project is to showcase production-style data engineering practices, including data modeling, automation, data quality checks, and clear separation between raw, processed, and curated data layers.
 
 2. Business Problem:
+
 Retail and supply chain teams need accurate demand forecasts to make informed inventory and replenishment decisions.
 However, demand is influenced not only by historical sales patterns, but also by external factors such as:
 
@@ -20,17 +23,17 @@ Without a reliable data platform that combines these signals, forecasting models
 
 This platform enables:
 
-> Centralized and reliable access to historical and enriched sales data
-> Consistent feature generation for machine learning models
-> Improved forecast accuracy by incorporating external signals
-> Reproducible and automated data pipelines
+* Centralized and reliable access to historical and enriched sales data
+* Consistent feature generation for machine learning models
+* Improved forecast accuracy by incorporating external signals
+* Reproducible and automated data pipelines
 
 Business stakeholders who would benefit include:
 
-> Inventory planners
-> Supply chain managers
-> Operations leadership
-> Data science teams
+* Inventory planners
+* Supply chain managers
+* Operations leadership
+* Data science teams
 
 4. Data Sources
 
