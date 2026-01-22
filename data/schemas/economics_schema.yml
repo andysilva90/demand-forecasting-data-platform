@@ -4,12 +4,12 @@ description:
 columns:
   - name: date
     type: date
-    description:
+    description: Date of the observation
   
   - name: inflation_rate
     type: float
-    description:
+    description: Daily inflation rate
   
   - name: gdp_growth
     type: float
-    description:
+    description: Daily gdp growth

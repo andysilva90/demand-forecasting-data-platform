@@ -12,8 +12,8 @@ columns:
 
   - name: precipitation
     type: float
-    description: Total daily precipitation
+    description: Daily precipitation
 
   - name: windspeed
     type: float
-    description: Average daily winspeed
+    description: Daily winspeed
