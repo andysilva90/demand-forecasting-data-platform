@@ -22,7 +22,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="Fetch daily weather data from Open-Meteo")
 
     parser.add_argument("--latitude", type=float, required=True, help="Latitude of the location")
-    parser.add_argument("--logitude", type=float, required=True, help="Longitude of the location")
+    parser.add_argument("--longitude", type=float, required=True, help="Longitude of the location")
     parser.add_argument("--start-date", type=validate_date, required=True, help="Start date (YYYY-MM-DD)")
     parser.add_argument("--end-date", type=validate_date, required=True, help="End date (YYYY-MM-DD)")
 
