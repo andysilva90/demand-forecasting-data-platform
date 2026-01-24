@@ -123,6 +123,7 @@ Key assumptions:
 * Historical sales data is complete but static
 * External API data is assumed to be authoritative
 * Forecasts are intended for planning purposes, not real-time decisioning
+* Near-real-time weather was intentionally excluded as unnecessary for the business use case
 
 10. Tech Stack
 
