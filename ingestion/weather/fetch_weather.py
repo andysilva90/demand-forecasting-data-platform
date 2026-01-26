@@ -27,3 +27,58 @@ def parse_arguments():
     parser.add_argument("--end-date", type=validate_date, required=True, help="End date (YYYY-MM-DD)")
 
     return parser.parse_args()
+
+def build_api_params(latitude, longitude, start_date, end_date):
+    """
+    Build query parameters for Open-Meteo API
+    """
+
+    return {
+        "latitude": latitude,
+        "longitude": longitude,
+        "start_date": start_date,
+        "end_date": end_date,
+        "daily": [
+            "temperature_2m_max",
+            "temperature_2m_min",
+            "precipitation_sum",
+            "windspeed_10m_max"
+        ],
+        "timezone": "UTC"
+    }
+
+def fetch_weather_data(params: dict) -> dict:
+    """
+    Call Open-Meteo API and return JSON response.
+    """
+
+    response = requests.get(OPEN_METEO_BASE_URL, params=params)
+
+    if response.status_code() != 200:
+        raise RuntimeError(
+            f"Open-Meteo API request failed "
+            f"with status {response.status_code}: {response.text}"
+        )
+    
+    return response.json()
+
+def main():
+    args = parse_arguments()
+
+    print("Starting weather ingesttion with parameters:")
+    print(vars(args))
+
+    params = build_api_params(
+        latitude = args.latitude,
+        longitude = args.longitude,
+        start_date = args.start_date,
+        end_date = args.end_date
+    )
+
+    weather_json = fetch_weather_data(params)
+
+    print("API call successful.")
+    print("Top-level keys in response:", weather_json.keys())
+
+if __name__ == "__main__":
+    main()
