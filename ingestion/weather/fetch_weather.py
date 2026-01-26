@@ -1,8 +1,17 @@
+# 1) import the necessary libraries:
+
+# 1a) Importing 'argparse' for parsing command-line arguments. Allows to run the script from the command line.
 import argparse
+
+# 1b) Importing 'requests' for making HTTP requests and calling the Open-Meteo API.
 import requests
+
+# 1c) Importing 'datetime' function from the 'datetime' library. It will be used to validate date formats. Ensures consistency of input dates.
 from datetime import datetime
 
+# Defines the Open-Meteo API URL as a constant.
 OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1/forecast"
+
 
 def validate_date(date_str: str) -> str:
     """
