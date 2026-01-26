@@ -9,20 +9,23 @@ import requests
 # 1c) Importing 'datetime' function from the 'datetime' library. It will be used to validate date formats. Ensures consistency of input dates.
 from datetime import datetime
 
-# Defines the Open-Meteo API URL as a constant.
+# 2) Defines the Open-Meteo API URL as a constant. It is easier to replace later, avoids duplication and improves readibility.
 OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1/forecast"
 
-
+# 3) Function to validate date input has the correct format.
 def validate_date(date_str: str) -> str:
     """
     Validate date format YYYY-MM-DD.
     Returns the same string if valid, raises error otherwise.
     """
     try:
+    #3a) 'datetime.strptime()' checks that the input given has the correct format "%Y-%m-%-d".
         datetime.strptime(date_str, "%Y-%m-%d")
         return date_str
+    #3b) If error, it returns a text error.
     except ValueError:
         raise ValueError(f"Invalid date format: {date_str}. Expected YYYY-MM-DD")
+
     
 def parse_arguments():
     """
